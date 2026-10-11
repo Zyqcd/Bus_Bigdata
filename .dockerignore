@@ -1,0 +1,4 @@
+# Build context for airflow/Dockerfile is the repository root; only the
+# requirements file is needed. Data and the virtualenv are never sent to Docker.
+*
+!requirements.txt

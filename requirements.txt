@@ -1,0 +1,6 @@
+# Namtang GTFS data pipeline
+requests>=2.32,<3
+pandas>=2.2,<4
+pyarrow>=17
+pytest>=8,<9
+psycopg[binary]>=3.2,<4

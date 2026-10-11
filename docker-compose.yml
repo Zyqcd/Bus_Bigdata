@@ -1,0 +1,19 @@
+services:
+  namtang-db:
+    image: postgres:18
+    container_name: namtang_db
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_DB: namtang_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+    ports:
+      - "5433:5432"
+
+    volumes:
+      - namtang_pgdata:/var/lib/postgresql
+
+volumes:
+  namtang_pgdata:

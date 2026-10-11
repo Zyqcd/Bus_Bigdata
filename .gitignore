@@ -1,0 +1,55 @@
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Secrets - never committed. Template: airflow/.env.example
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Claude Code per-user settings (local permission rules)
+.claude/settings.local.json
+
+# Airflow (local dev stack)
+airflow/logs/
+*.log
+
+# Data (large files). Only the .gitkeep placeholders are tracked.
+data/raw/*
+!data/raw/namtang/
+data/raw/namtang/*
+!data/raw/namtang/.gitkeep
+data/clean/*
+!data/clean/namtang/
+data/clean/namtang/*
+!data/clean/namtang/.gitkeep
+data/analysis/**/*
+data/metadata/namtang_pipeline.lock
+# BKK Traffic data root (source snapshots, pipeline raw pages, exports, cutover backups) - never committed
+data/bkk_traffic/**
+
+# Database dumps and handoff payloads (shared outside Git; see handoff/bkk_traffic/README.md)
+*.dump
+*.backup
+*.sql.gz
+handoff/**/payload/
+
+# Friend's original source archive (237 MB, exceeds GitHub's 100 MB limit)
+scrapping--main.zip
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
